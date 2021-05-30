@@ -1,0 +1,8 @@
+- Menerapkan obfuscation dengan ProGuard :
+	- Config proguard berada di proguard-rules.pro (core) dengan menggunakan compiler R8
+
+- Menerapkan encryption pada database
+	- Database terenkripsi pada database module core/di/CoreModule.kt menggunakan sqlite chiper
+
+- Menerapkan certificate pinning untuk koneksi ke server.
+	- Certificate pinning diterapkan pada network module core/di/CoreModule.kt menggunakan certificatepinner builder

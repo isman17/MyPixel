@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Pixel</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="image_resolution">Image Resolution</string>
+    <string name="views">Views</string>
+    <string name="downloads">Downloads</string>
+    <string name="likes">Likes</string>
+    <string name="comments">Comments</string>
+    <string name="username">Username</string>
+    <string name="search">Search</string>
+    <string name="added_favorite">Added to favorite</string>
+    <string name="removed_favorite">Removed from favorite</string>
+</resources>
