@@ -1,19 +1,11 @@
-## Submission Capstone Akhir
+Link project CI: https://github.com/isman17/MyPixel
 
-### Submission checklist
 
-- Menerapkan Continuous Integration:
-	- Project CI MyPixel dapat diakses melalui link berikut: https://app.circleci.com/pipelines/github/isman17/MyPixel
+- Menerapkan obfuscation dengan ProGuard :
+	- Config proguard berada di proguard-rules.pro (core) dengan menggunakan compiler R8
 
-- Menerapkan Security
+- Menerapkan encryption pada database
+	- Database terenkripsi pada database module core/di/CoreModule.kt menggunakan sqlite chiper
 
-	- Menerapkan obfuscation dengan ProGuard:
-		- Teknik obfuscation dengan mengaktifkan proguard pada module app dan core
-		- Untuk mengaktifkan proguard dengan cara memberikan nilai true pada minifyEnabled dan menambahkan konfigurasi pada consumer-rules.pro (module: core)
-
-	- Menerapkan encryption pada database:
-		- Menggunakan library SQLChiper dengan method openHelperFactory yang diterapkan pada database room tepatnya di module core/di/CoreModule.kt
-
-	- Menerapkan certificate pinning untuk koneksi ke server:
-		- Teknik certificate pinning dengan fungsi add menambahkan hostname server dan certificate server menggunakan CerticatePinning.Builder yang ditambahkan ke OkHttpClient.Builder dengan fungsi CertificatePinner
-		- Certificate pinning diterapkan pada variabel network module tepatnya di core/di/CoreModule.kt
+- Menerapkan certificate pinning untuk koneksi ke server.
+	- Certificate pinning diterapkan pada network module core/di/CoreModule.kt menggunakan certificatepinner builder
