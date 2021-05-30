@@ -22,6 +22,7 @@ android {
         buildConfigField("String", "API_KEY", '"19784369-981634bf843ae019449f3bfb4"')
         buildConfigField("String", "BASE_URL", '"https://pixabay.com/api/"')
         buildConfigField("String", "HOSTNAME", '"pixabay.com"')
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -40,11 +41,14 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    lintOptions {
+        abortOnError false
+        ignoreWarnings true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     //room
     implementation "androidx.room:room-runtime:$room_version"

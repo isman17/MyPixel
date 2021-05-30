@@ -20,7 +20,6 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
                 }
                 is ApiResponse.Error -> {
                     onFetchFailed()
-                    emit(Resource.Error<ResultType>(apiResponse.errorMessage))
                 }
             }
         } else {

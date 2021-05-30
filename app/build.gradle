@@ -37,19 +37,14 @@ android {
     buildFeatures {
         viewBinding true
     }
+    lintOptions {
+        abortOnError false
+        ignoreWarnings true
+    }
     dynamicFeatures = [':favorite']
 }
 
 dependencies {
     implementation project(":core")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    //shimmer
-    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
-
-    //leakCanary
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
-
 }
