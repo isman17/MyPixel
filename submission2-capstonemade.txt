@@ -1,3 +1,6 @@
+Link project CI: https://github.com/isman17/MyPixel
+
+
 - Menerapkan obfuscation dengan ProGuard :
 	- Config proguard berada di proguard-rules.pro (core) dengan menggunakan compiler R8
 
