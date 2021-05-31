@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.capstone.core.ui.PixelAdapter
 import com.dicoding.capstone.mypixel.favorite.databinding.FavoriteFragmentBinding
+import com.dicoding.capstone.mypixel.favorite.di.favoriteModule
 import com.dicoding.capstone.mypixel.ui.detail.DetailPixelActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
@@ -25,11 +26,6 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FavoriteFragmentBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         loadKoinModules(favoriteModule)
 
@@ -54,6 +50,8 @@ class FavoriteFragment : Fragment() {
                 adapter = pixelAdapter
             }
         }
+
+        return binding.root
     }
 
     override fun onDestroyView() {
